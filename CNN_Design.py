@@ -14,7 +14,7 @@ from torchvision.models import resnet18, ResNet18_Weights
 weight = ResNet18_Weights.DEFAULT
 preprocess = weight.transforms()
 
-#Function for reproducibilty. You can check out: https://pytorch.org/docs/stable/notes/randomness.html
+
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
