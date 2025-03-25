@@ -26,7 +26,7 @@ def set_seed(seed):
     
 set_seed(100)
 
-#TODO: Populate the dictionary with your hyperparameters for training
+
 def get_config_dict(pretrain):
     """
     pretrain: 0 or 1. Can be used if you need different configs for part 1 and 2.
@@ -37,8 +37,8 @@ def get_config_dict(pretrain):
             "batch_size": 100,
             "lr": 1e-3,
             "num_epochs": 15,
-            "weight_decay": 1e-3,   #set to 0 if you do not want L2 regularization
-            "save_criteria": None,     #Str. Can be 'accuracy'/'loss'/'last'. (Only for part 2)
+            "weight_decay": 1e-3,   
+            "save_criteria": None,     
         }
     else:
 
@@ -52,7 +52,7 @@ def get_config_dict(pretrain):
     return config
     
 
-#TODO: Part 1 - Complete this with your CNN architecture. Make sure to complete the architecture requirements.
+
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
@@ -77,7 +77,7 @@ class Net(nn.Module):
         return x
 
 
-#TODO: Part 2 - Complete this with your Pretrained CNN architecture. 
+ 
 class PretrainedNet(nn.Module):
     def __init__(self):
         super(PretrainedNet, self).__init__()
@@ -89,7 +89,7 @@ class PretrainedNet(nn.Module):
         return x 
 
 
-#Feel free to edit this with your custom train/validation splits, transformations and augmentations for CIFAR-10, if needed.
+
 def load_dataset(pretrain):
     """
     pretrain: 0 or 1. Can be used if you need to define different dataset splits/transformations/augmentations for part 2.
